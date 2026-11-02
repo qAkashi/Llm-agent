@@ -1,4 +1,3 @@
-"""Build a 10-page Russian technical report from real lab evidence (reportlab required)."""
 import json
 from pathlib import Path
 import re

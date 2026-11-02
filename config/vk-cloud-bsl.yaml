@@ -1,5 +1,4 @@
-# Replace bucket, endpoint and region with values from YOUR VK Cloud project.
-# Create Secret vk-s3 with key cloud from a private AWS credentials file.
+
 apiVersion: velero.io/v1
 kind: BackupStorageLocation
 metadata: {name: vk-cloud, namespace: velero}
