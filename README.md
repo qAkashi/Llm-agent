@@ -63,12 +63,5 @@ python scripts/lab.py demo
 Инструкции: [оператор](docs/RUNBOOK.md), [ошибки](docs/FAILURES.md),
 [безопасность](docs/SECURITY.md), [VK Cloud](docs/VK-CLOUD.md), [источники](docs/SOURCES.md).
 
-## Публикация в Git
 
-
-
-```bash
-git remote add origin <URL-ВАШЕГО-РЕПОЗИТОРИЯ>
-git push -u origin main
-```
 
