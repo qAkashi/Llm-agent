@@ -1,0 +1,18 @@
+Executed locally on 2026-11-02 with Python 3.12 and PyYAML 6.0.3.
+Command: python -m unittest discover -s tests -v
+Result: 13 tests, 0 failures, 0 errors; Ran 13 tests in 0.038s; OK.
+
+Checked behaviors:
+- expected row counts and integer total;
+- SHA256 detects modified rows when count and sum are unchanged;
+- CRLF/LF canonicalization;
+- backup volume explicitly selected;
+- public manifests contain no embedded Secret;
+- physical PVs excluded;
+- original PVC binding removed on restore;
+- valid backup accepted;
+- absent, partial, failed or zero-byte volume backup rejected;
+- protected and malformed restore namespaces rejected.
+
+Additional check: bash -n scripts/backup.sh scripts/restore.sh; exit code 0.
+Full integration proof: reports/evidence/result.json and steps.csv.

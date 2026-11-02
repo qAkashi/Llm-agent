@@ -1,0 +1,56 @@
+[
+  {
+    "apiVersion": "velero.io/v1",
+    "kind": "PodVolumeRestore",
+    "metadata": {
+      "creationTimestamp": "2026-11-02T12:38:52Z",
+      "generateName": "restore-1102123851-8a90-",
+      "generation": 6,
+      "labels": {
+        "velero.io/pod-uid": "32160836-d1af-4835-9bd8-1d9a652013bc",
+        "velero.io/pvc-uid": "e9064dce-2453-4316-91d7-9c109aa83c5d",
+        "velero.io/restore-name": "restore-1102123851-8a90",
+        "velero.io/restore-uid": "2acdd136-3764-4f98-8c7f-e93b75f64850"
+      },
+      "name": "restore-1102123851-8a90-t8n4t",
+      "namespace": "velero",
+      "ownerReferences": [
+        {
+          "apiVersion": "velero.io/v1",
+          "controller": true,
+          "kind": "Restore",
+          "name": "restore-1102123851-8a90",
+          "uid": "2acdd136-3764-4f98-8c7f-e93b75f64850"
+        }
+      ],
+      "resourceVersion": "4325",
+      "uid": "2d14c061-2152-4921-a6ed-9898d0effa6d"
+    },
+    "spec": {
+      "backupStorageLocation": "default",
+      "pod": {
+        "kind": "Pod",
+        "name": "postgres",
+        "namespace": "practice1-restore-interrupt-2401",
+        "uid": "32160836-d1af-4835-9bd8-1d9a652013bc"
+      },
+      "repoIdentifier": "",
+      "snapshotID": "955843e7d36ec25c9475e939bc68a720",
+      "snapshotSize": 11580,
+      "sourceNamespace": "practice1-app",
+      "uploaderType": "kopia",
+      "volume": "backup-data"
+    },
+    "status": {
+      "acceptedTimestamp": "2026-11-02T12:39:02Z",
+      "completionTimestamp": "2026-11-02T12:39:05Z",
+      "node": "practice1-control-plane",
+      "phase": "Completed",
+      "progress": {
+        "bytesDone": 11580,
+        "totalBytes": 11580
+      },
+      "startTimestamp": "2026-11-02T12:39:03Z"
+    }
+  }
+]

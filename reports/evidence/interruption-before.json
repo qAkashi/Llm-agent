@@ -1,0 +1,55 @@
+{
+  "apiVersion": "velero.io/v1",
+  "kind": "Restore",
+  "metadata": {
+    "annotations": {
+      "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Restore\",\"metadata\":{\"annotations\":{},\"name\":\"restore-1102123851-8a90\",\"namespace\":\"velero\"},\"spec\":{\"backupName\":\"manual-1102123740-0256\",\"excludedResources\":[\"events\",\"jobs\",\"persistentvolumes\"],\"includeClusterResources\":false,\"includedNamespaces\":[\"practice1-app\"],\"namespaceMapping\":{\"practice1-app\":\"practice1-restore-interrupt-2401\"},\"resourceModifier\":{\"kind\":\"ConfigMap\",\"name\":\"practice1-restore-modifiers\"},\"restorePVs\":true}}\n"
+    },
+    "creationTimestamp": "2026-11-02T12:38:52Z",
+    "finalizers": [
+      "restores.velero.io/external-resources-finalizer"
+    ],
+    "generation": 3,
+    "name": "restore-1102123851-8a90",
+    "namespace": "velero",
+    "resourceVersion": "4188",
+    "uid": "2acdd136-3764-4f98-8c7f-e93b75f64850"
+  },
+  "spec": {
+    "backupName": "manual-1102123740-0256",
+    "excludedResources": [
+      "events",
+      "jobs",
+      "persistentvolumes",
+      "nodes",
+      "events.events.k8s.io",
+      "backups.velero.io",
+      "restores.velero.io",
+      "resticrepositories.velero.io",
+      "csinodes.storage.k8s.io",
+      "volumeattachments.storage.k8s.io",
+      "backuprepositories.velero.io"
+    ],
+    "includeClusterResources": false,
+    "includedNamespaces": [
+      "practice1-app"
+    ],
+    "itemOperationTimeout": "4h0m0s",
+    "namespaceMapping": {
+      "practice1-app": "practice1-restore-interrupt-2401"
+    },
+    "resourceModifier": {
+      "kind": "ConfigMap",
+      "name": "practice1-restore-modifiers"
+    },
+    "restorePVs": true
+  },
+  "status": {
+    "phase": "InProgress",
+    "progress": {
+      "itemsRestored": 19,
+      "totalItems": 19
+    },
+    "startTimestamp": "2026-11-02T12:38:52Z"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "before": {
+    "sha256": "f6d09d7a89142a87847c6cf431f71d37786657dd9d36b0b11c2157cdcea7a2b1",
+    "accounts": 100,
+    "orders": 1000,
+    "amount_cents": 8508500
+  },
+  "after": {
+    "sha256": "f6d09d7a89142a87847c6cf431f71d37786657dd9d36b0b11c2157cdcea7a2b1",
+    "accounts": 100,
+    "orders": 1000,
+    "amount_cents": 8508500
+  },
+  "equal": true
+}

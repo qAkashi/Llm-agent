@@ -1,0 +1,152 @@
+{
+  "status": "ПОЛНЫЙ ПРОГОН: PASS",
+  "evidence_run": "demo-1102123502-8e91",
+  "baseline": {
+    "sha256": "f6d09d7a89142a87847c6cf431f71d37786657dd9d36b0b11c2157cdcea7a2b1",
+    "accounts": 100,
+    "orders": 1000,
+    "amount_cents": 8508500
+  },
+  "dump_bytes": "11478",
+  "bucket_size_at_backup": "219357 байт; 76 объектов (включая предыдущие копии)",
+  "restore_and_verify_seconds": [
+    33.641,
+    34.062
+  ],
+  "steps": [
+    {
+      "step": "preflight",
+      "started_utc": "2026-11-02T12:35:02+00:00",
+      "status": "PASS",
+      "seconds": 0.672,
+      "finished_utc": "2026-11-02T12:35:02+00:00"
+    },
+    {
+      "step": "create-kind-cluster",
+      "started_utc": "2026-11-02T12:35:02+00:00",
+      "status": "PASS",
+      "seconds": 2.547,
+      "finished_utc": "2026-11-02T12:35:05+00:00"
+    },
+    {
+      "step": "build-and-load-minio-images",
+      "started_utc": "2026-11-02T12:35:05+00:00",
+      "status": "PASS",
+      "seconds": 14.359,
+      "finished_utc": "2026-11-02T12:35:19+00:00"
+    },
+    {
+      "step": "generate-private-secrets",
+      "started_utc": "2026-11-02T12:35:19+00:00",
+      "status": "PASS",
+      "seconds": 1.156,
+      "finished_utc": "2026-11-02T12:35:21+00:00"
+    },
+    {
+      "step": "deploy-minio-and-create-bucket",
+      "started_utc": "2026-11-02T12:35:21+00:00",
+      "status": "PASS",
+      "seconds": 4.375,
+      "finished_utc": "2026-11-02T12:35:25+00:00"
+    },
+    {
+      "step": "install-velero",
+      "started_utc": "2026-11-02T12:35:25+00:00",
+      "status": "PASS",
+      "seconds": 5.5,
+      "finished_utc": "2026-11-02T12:35:30+00:00"
+    },
+    {
+      "step": "deploy-app-and-seed",
+      "started_utc": "2026-11-02T12:35:30+00:00",
+      "status": "PASS",
+      "seconds": 29.657,
+      "finished_utc": "2026-11-02T12:36:00+00:00"
+    },
+    {
+      "step": "install-daily-schedule",
+      "started_utc": "2026-11-02T12:36:00+00:00",
+      "status": "PASS",
+      "seconds": 0.265,
+      "finished_utc": "2026-11-02T12:36:00+00:00"
+    },
+    {
+      "step": "scheduled-backup-proof",
+      "started_utc": "2026-11-02T12:36:00+00:00",
+      "status": "PASS",
+      "seconds": 99.922,
+      "finished_utc": "2026-11-02T12:37:40+00:00"
+    },
+    {
+      "step": "manual-backup",
+      "started_utc": "2026-11-02T12:37:40+00:00",
+      "status": "PASS",
+      "seconds": 11.547,
+      "finished_utc": "2026-11-02T12:37:52+00:00"
+    },
+    {
+      "step": "failure-missing-bucket",
+      "started_utc": "2026-11-02T12:37:52+00:00",
+      "status": "PASS",
+      "seconds": 1.734,
+      "finished_utc": "2026-11-02T12:37:54+00:00"
+    },
+    {
+      "step": "failure-wrong-key",
+      "started_utc": "2026-11-02T12:37:54+00:00",
+      "status": "PASS",
+      "seconds": 1.641,
+      "finished_utc": "2026-11-02T12:37:55+00:00"
+    },
+    {
+      "step": "failure-access-denied",
+      "started_utc": "2026-11-02T12:37:55+00:00",
+      "status": "PASS",
+      "seconds": 1.64,
+      "finished_utc": "2026-11-02T12:37:57+00:00"
+    },
+    {
+      "step": "delete-source-namespace",
+      "started_utc": "2026-11-02T12:37:57+00:00",
+      "status": "PASS",
+      "seconds": 17.063,
+      "finished_utc": "2026-11-02T12:38:14+00:00"
+    },
+    {
+      "step": "restore-to-new-namespace",
+      "started_utc": "2026-11-02T12:38:14+00:00",
+      "status": "PASS",
+      "seconds": 32.219,
+      "finished_utc": "2026-11-02T12:38:46+00:00"
+    },
+    {
+      "step": "verify-data-schema-and-api",
+      "started_utc": "2026-11-02T12:38:46+00:00",
+      "status": "PASS",
+      "seconds": 1.422,
+      "finished_utc": "2026-11-02T12:38:48+00:00"
+    },
+    {
+      "step": "failure-interrupted-restore",
+      "started_utc": "2026-11-02T12:38:48+00:00",
+      "status": "PASS",
+      "seconds": 62.672,
+      "finished_utc": "2026-11-02T12:39:50+00:00"
+    },
+    {
+      "step": "restore-to-new-namespace",
+      "started_utc": "2026-11-02T12:39:50+00:00",
+      "status": "PASS",
+      "seconds": 32.469,
+      "finished_utc": "2026-11-02T12:40:23+00:00"
+    },
+    {
+      "step": "verify-data-schema-and-api",
+      "started_utc": "2026-11-02T12:40:23+00:00",
+      "status": "PASS",
+      "seconds": 1.593,
+      "finished_utc": "2026-11-02T12:40:24+00:00"
+    }
+  ],
+  "vk_cloud_tested": false
+}

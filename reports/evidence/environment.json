@@ -1,0 +1,11 @@
+{
+  "executables": {
+    "docker": "C:\\Users\\kamil\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+    "kind": "C:\\Users\\kamil\\OneDrive\\Desktop\\practice1\\tools\\bin\\kind.exe",
+    "kubectl": "C:\\Users\\kamil\\OneDrive\\Desktop\\practice1\\tools\\bin\\kubectl.exe",
+    "velero": "C:\\Users\\kamil\\OneDrive\\Desktop\\practice1\\tools\\bin\\velero.exe"
+  },
+  "docker_server": "29.9.2",
+  "memory_bytes": 16605908992,
+  "cpus": 12
+}

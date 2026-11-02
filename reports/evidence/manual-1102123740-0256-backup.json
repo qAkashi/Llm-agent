@@ -1,0 +1,58 @@
+{
+  "apiVersion": "velero.io/v1",
+  "kind": "Backup",
+  "metadata": {
+    "annotations": {
+      "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Backup\",\"metadata\":{\"annotations\":{},\"name\":\"manual-1102123740-0256\",\"namespace\":\"velero\"},\"spec\":{\"defaultVolumesToFsBackup\":false,\"excludedResources\":[\"events\",\"jobs\",\"persistentvolumes\"],\"includeClusterResources\":false,\"includedNamespaces\":[\"practice1-app\"],\"itemOperationTimeout\":\"10m0s\",\"snapshotVolumes\":false,\"storageLocation\":\"default\",\"ttl\":\"168h0m0s\"}}\n",
+      "velero.io/resource-timeout": "10m0s",
+      "velero.io/source-cluster-k8s-gitversion": "v1.35.8",
+      "velero.io/source-cluster-k8s-major-version": "1",
+      "velero.io/source-cluster-k8s-minor-version": "35"
+    },
+    "creationTimestamp": "2026-11-02T12:37:40Z",
+    "generation": 9,
+    "labels": {
+      "velero.io/storage-location": "default"
+    },
+    "name": "manual-1102123740-0256",
+    "namespace": "velero",
+    "resourceVersion": "3695",
+    "uid": "4e686ea5-a38b-4d1c-a32b-4102b826e557"
+  },
+  "spec": {
+    "csiSnapshotTimeout": "10m0s",
+    "defaultVolumesToFsBackup": false,
+    "excludedResources": [
+      "events",
+      "jobs",
+      "persistentvolumes",
+      "volumesnapshots.snapshot.storage.k8s.io",
+      "volumesnapshotcontents.snapshot.storage.k8s.io"
+    ],
+    "includeClusterResources": false,
+    "includedNamespaces": [
+      "practice1-app"
+    ],
+    "itemOperationTimeout": "10m0s",
+    "snapshotMoveData": false,
+    "snapshotVolumes": false,
+    "storageLocation": "default",
+    "ttl": "168h0m0s",
+    "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+  },
+  "status": {
+    "completionTimestamp": "2026-11-02T12:37:46Z",
+    "expiration": "2026-11-09T12:37:40Z",
+    "formatVersion": "1.1.0",
+    "hookStatus": {
+      "hooksAttempted": 2
+    },
+    "phase": "Completed",
+    "progress": {
+      "itemsBackedUp": 54,
+      "totalItems": 54
+    },
+    "startTimestamp": "2026-11-02T12:37:40Z",
+    "version": 1
+  }
+}

@@ -1,0 +1,45 @@
+kubectl get pods -A
+NAMESPACE                      NAME                                              READY   STATUS      RESTARTS   AGE
+kube-system                    coredns-7d764666f9-54ztl                          1/1     Running     0          40m
+kube-system                    coredns-7d764666f9-hff7h                          1/1     Running     0          40m
+kube-system                    etcd-practice1-control-plane                      1/1     Running     0          40m
+kube-system                    kindnet-ldvbq                                     1/1     Running     0          40m
+kube-system                    kube-apiserver-practice1-control-plane            1/1     Running     0          40m
+kube-system                    kube-controller-manager-practice1-control-plane   1/1     Running     0          40m
+kube-system                    kube-proxy-tjq2p                                  1/1     Running     0          40m
+kube-system                    kube-scheduler-practice1-control-plane            1/1     Running     0          40m
+local-path-storage             local-path-provisioner-67b778fdf6-q4wlk           1/1     Running     0          40m
+practice1-restore-main-a97b    api-687b6cfc88-dlk6m                              1/1     Running     0          15m
+practice1-restore-main-a97b    postgres                                          1/1     Running     0          15m
+practice1-restore-retry-65b7   api-687b6cfc88-dlk6m                              1/1     Running     0          14m
+practice1-restore-retry-65b7   postgres                                          1/1     Running     0          14m
+practice1-storage              minio-1102122532-d106-9brjz                       0/1     Completed   0          28m
+practice1-storage              minio-1102122844-71cc-z6zjz                       0/1     Completed   0          25m
+practice1-storage              minio-1102123027-016b-8bddk                       0/1     Completed   0          23m
+practice1-storage              minio-1102123521-eab4-dlhjt                       0/1     Completed   0          18m
+practice1-storage              minio-1102123748-7620-kdpkn                       0/1     Completed   0          16m
+practice1-storage              minio-1102124443-27a5-ggxgw                       0/1     Completed   0          9m25s
+practice1-storage              minio-1102124447-f757-r2xxc                       0/1     Completed   0          9m21s
+practice1-storage              minio-1102124603-3bbb-6j6jp                       0/1     Completed   0          8m5s
+practice1-storage              minio-1102124717-2be9-bsh5d                       0/1     Completed   0          6m50s
+practice1-storage              minio-1102124721-3bbe-d5lpk                       0/1     Completed   0          6m47s
+practice1-storage              minio-1102124725-7474-vs25q                       0/1     Completed   0          6m43s
+practice1-storage              minio-5b76b6b87c-jcfd8                            1/1     Running     0          28m
+velero                         node-agent-jfm49                                  1/1     Running     0          15m
+velero                         velero-7df558f7fb-9djz2                           1/1     Running     0          15m
+
+kubectl get pvc -A
+NAMESPACE                      NAME          STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS      VOLUMEATTRIBUTESCLASS   AGE
+practice1-restore-main-a97b    backup-data   Bound    pvc-96bf10e2-fb47-4de5-b5b2-0a50d813e3dd   1Gi        RWO            practice1-local   <unset>                 15m
+practice1-restore-main-a97b    pgdata        Bound    pvc-f8721a47-36e3-4b98-af41-7e098757934e   2Gi        RWO            practice1-local   <unset>                 15m
+practice1-restore-retry-65b7   backup-data   Bound    pvc-6e12bdcf-8b43-45e6-9c38-081d70065de2   1Gi        RWO            practice1-local   <unset>                 14m
+practice1-restore-retry-65b7   pgdata        Bound    pvc-031c4e3d-c10f-410c-b26f-79d6742188b0   2Gi        RWO            practice1-local   <unset>                 14m
+practice1-storage              minio-data    Bound    pvc-4fb31bbe-8a50-4333-82c2-25b82569c8aa   5Gi        RWO            practice1-local   <unset>                 40m
+
+kubectl -n velero get backupstoragelocations
+NAME      PHASE       LAST VALIDATED   AGE   DEFAULT
+default   Available   9s               28m   true
+
+kubectl -n velero get schedule
+NAME              STATUS    SCHEDULE     LASTBACKUP   AGE   PAUSED
+practice1-daily   Enabled   0 23 * * *                24m   true

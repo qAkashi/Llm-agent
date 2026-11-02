@@ -1,0 +1,52 @@
+{
+  "apiVersion": "velero.io/v1",
+  "kind": "Backup",
+  "metadata": {
+    "annotations": {
+      "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Backup\",\"metadata\":{\"annotations\":{},\"name\":\"test-wrong-key-1102123754-7ecd\",\"namespace\":\"velero\"},\"spec\":{\"defaultVolumesToFsBackup\":false,\"excludedResources\":[\"events\",\"jobs\",\"persistentvolumes\"],\"includeClusterResources\":false,\"includedNamespaces\":[\"practice1-app\"],\"itemOperationTimeout\":\"10m0s\",\"snapshotVolumes\":false,\"storageLocation\":\"test-wrong-key-1102123754-7ecd\",\"ttl\":\"168h0m0s\"}}\n",
+      "velero.io/resource-timeout": "10m0s",
+      "velero.io/source-cluster-k8s-gitversion": "v1.35.8",
+      "velero.io/source-cluster-k8s-major-version": "1",
+      "velero.io/source-cluster-k8s-minor-version": "35"
+    },
+    "creationTimestamp": "2026-11-02T12:37:55Z",
+    "generation": 4,
+    "labels": {
+      "velero.io/storage-location": "test-wrong-key-1102123754-7ecd"
+    },
+    "name": "test-wrong-key-1102123754-7ecd",
+    "namespace": "velero",
+    "resourceVersion": "3741",
+    "uid": "27245f30-8f48-47e6-8e17-c87b60733704"
+  },
+  "spec": {
+    "csiSnapshotTimeout": "10m0s",
+    "defaultVolumesToFsBackup": false,
+    "excludedResources": [
+      "events",
+      "jobs",
+      "persistentvolumes",
+      "volumesnapshots.snapshot.storage.k8s.io",
+      "volumesnapshotcontents.snapshot.storage.k8s.io"
+    ],
+    "includeClusterResources": false,
+    "includedNamespaces": [
+      "practice1-app"
+    ],
+    "itemOperationTimeout": "10m0s",
+    "snapshotMoveData": false,
+    "snapshotVolumes": false,
+    "storageLocation": "test-wrong-key-1102123754-7ecd",
+    "ttl": "168h0m0s",
+    "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+  },
+  "status": {
+    "expiration": "2026-11-09T12:37:55Z",
+    "formatVersion": "1.1.0",
+    "phase": "FailedValidation",
+    "validationErrors": [
+      "backup can't be created because BackupStorageLocation test-wrong-key-1102123754-7ecd is in Unavailable status."
+    ],
+    "version": 1
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "apiVersion": "velero.io/v1",
+  "kind": "BackupStorageLocation",
+  "metadata": {
+    "annotations": {
+      "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"BackupStorageLocation\",\"metadata\":{\"annotations\":{},\"name\":\"test-wrong-key-1102123754-7ecd\",\"namespace\":\"velero\"},\"spec\":{\"config\":{\"region\":\"us-east-1\",\"s3ForcePathStyle\":\"true\",\"s3Url\":\"http://minio.practice1-storage.svc.cluster.local:9000\"},\"credential\":{\"key\":\"cloud\",\"name\":\"test-wrong-key-1102123754-7ecd\"},\"objectStorage\":{\"bucket\":\"practice1-backups\"},\"provider\":\"aws\",\"validationFrequency\":\"10s\"}}\n"
+    },
+    "creationTimestamp": "2026-11-02T12:37:54Z",
+    "generation": 2,
+    "name": "test-wrong-key-1102123754-7ecd",
+    "namespace": "velero",
+    "resourceVersion": "3735",
+    "uid": "a4992f3e-43cc-4e6d-9ec5-8fc782649660"
+  },
+  "spec": {
+    "config": {
+      "region": "us-east-1",
+      "s3ForcePathStyle": "true",
+      "s3Url": "http://minio.practice1-storage.svc.cluster.local:9000"
+    },
+    "credential": {
+      "key": "cloud",
+      "name": "test-wrong-key-1102123754-7ecd"
+    },
+    "objectStorage": {
+      "bucket": "practice1-backups"
+    },
+    "provider": "aws",
+    "validationFrequency": "10s"
+  },
+  "status": {
+    "lastValidationTime": "2026-11-02T12:37:54Z",
+    "message": "BackupStorageLocation \"test-wrong-key-1102123754-7ecd\" is unavailable: rpc error: code = Unknown desc = operation error S3: ListObjectsV2, https response error StatusCode: 403, RequestID: 18E43AAEE9796092, HostID: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, api error InvalidAccessKeyId: The Access Key Id you provided does not exist in our records.",
+    "phase": "Unavailable"
+  }
+}

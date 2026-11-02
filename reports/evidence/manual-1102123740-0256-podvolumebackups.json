@@ -1,0 +1,67 @@
+[
+  {
+    "apiVersion": "velero.io/v1",
+    "kind": "PodVolumeBackup",
+    "metadata": {
+      "annotations": {
+        "velero.io/pvc-name": "backup-data"
+      },
+      "creationTimestamp": "2026-11-02T12:37:41Z",
+      "generateName": "manual-1102123740-0256-",
+      "generation": 7,
+      "labels": {
+        "velero.io/backup-name": "manual-1102123740-0256",
+        "velero.io/backup-uid": "4e686ea5-a38b-4d1c-a32b-4102b826e557",
+        "velero.io/pvc-uid": "7c135282-f5d4-46ca-affc-89e9218ba499"
+      },
+      "name": "manual-1102123740-0256-s8sxz",
+      "namespace": "velero",
+      "ownerReferences": [
+        {
+          "apiVersion": "velero.io/v1",
+          "controller": true,
+          "kind": "Backup",
+          "name": "manual-1102123740-0256",
+          "uid": "4e686ea5-a38b-4d1c-a32b-4102b826e557"
+        }
+      ],
+      "resourceVersion": "3689",
+      "uid": "0b1a0970-847b-41c2-8260-0d192a41857f"
+    },
+    "spec": {
+      "backupStorageLocation": "default",
+      "node": "practice1-control-plane",
+      "pod": {
+        "kind": "Pod",
+        "name": "postgres",
+        "namespace": "practice1-app",
+        "uid": "05735a27-5167-4608-9049-ccfaea87d466"
+      },
+      "repoIdentifier": "",
+      "tags": {
+        "backup": "manual-1102123740-0256",
+        "backup-uid": "4e686ea5-a38b-4d1c-a32b-4102b826e557",
+        "ns": "practice1-app",
+        "pod": "postgres",
+        "pod-uid": "05735a27-5167-4608-9049-ccfaea87d466",
+        "pvc-uid": "7c135282-f5d4-46ca-affc-89e9218ba499",
+        "volume": "backup-data"
+      },
+      "uploaderType": "kopia",
+      "volume": "backup-data"
+    },
+    "status": {
+      "acceptedTimestamp": "2026-11-02T12:37:41Z",
+      "completionTimestamp": "2026-11-02T12:37:44Z",
+      "incrementalBytes": 11580,
+      "path": "/0b1a0970-847b-41c2-8260-0d192a41857f",
+      "phase": "Completed",
+      "progress": {
+        "bytesDone": 11580,
+        "totalBytes": 11580
+      },
+      "snapshotID": "955843e7d36ec25c9475e939bc68a720",
+      "startTimestamp": "2026-11-02T12:37:42Z"
+    }
+  }
+]

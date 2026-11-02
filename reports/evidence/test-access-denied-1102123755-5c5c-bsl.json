@@ -1,0 +1,36 @@
+{
+  "apiVersion": "velero.io/v1",
+  "kind": "BackupStorageLocation",
+  "metadata": {
+    "annotations": {
+      "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"BackupStorageLocation\",\"metadata\":{\"annotations\":{},\"name\":\"test-access-denied-1102123755-5c5c\",\"namespace\":\"velero\"},\"spec\":{\"config\":{\"region\":\"us-east-1\",\"s3ForcePathStyle\":\"true\",\"s3Url\":\"http://minio.practice1-storage.svc.cluster.local:9000\"},\"credential\":{\"key\":\"cloud\",\"name\":\"test-access-denied-1102123755-5c5c\"},\"objectStorage\":{\"bucket\":\"practice1-backups\"},\"provider\":\"aws\",\"validationFrequency\":\"10s\"}}\n"
+    },
+    "creationTimestamp": "2026-11-02T12:37:56Z",
+    "generation": 2,
+    "name": "test-access-denied-1102123755-5c5c",
+    "namespace": "velero",
+    "resourceVersion": "3747",
+    "uid": "198e761c-c359-4e72-a2fe-7b99ecd87e13"
+  },
+  "spec": {
+    "config": {
+      "region": "us-east-1",
+      "s3ForcePathStyle": "true",
+      "s3Url": "http://minio.practice1-storage.svc.cluster.local:9000"
+    },
+    "credential": {
+      "key": "cloud",
+      "name": "test-access-denied-1102123755-5c5c"
+    },
+    "objectStorage": {
+      "bucket": "practice1-backups"
+    },
+    "provider": "aws",
+    "validationFrequency": "10s"
+  },
+  "status": {
+    "lastValidationTime": "2026-11-02T12:37:56Z",
+    "message": "BackupStorageLocation \"test-access-denied-1102123755-5c5c\" is unavailable: rpc error: code = Unknown desc = operation error S3: ListObjectsV2, https response error StatusCode: 403, RequestID: 18E43AAF4C20EECD, HostID: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, api error AccessDenied: Access Denied.",
+    "phase": "Unavailable"
+  }
+}

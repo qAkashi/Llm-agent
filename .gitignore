@@ -1,0 +1,10 @@
+work/
+tools/bin/
+.venv/
+__pycache__/
+*.pyc
+.env
+*.credentials
+*kubeconfig*
+reports/runs/
+*.zip

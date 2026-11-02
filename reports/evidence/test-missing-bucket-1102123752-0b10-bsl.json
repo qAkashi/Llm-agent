@@ -1,0 +1,36 @@
+{
+  "apiVersion": "velero.io/v1",
+  "kind": "BackupStorageLocation",
+  "metadata": {
+    "annotations": {
+      "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"BackupStorageLocation\",\"metadata\":{\"annotations\":{},\"name\":\"test-missing-bucket-1102123752-0b10\",\"namespace\":\"velero\"},\"spec\":{\"config\":{\"region\":\"us-east-1\",\"s3ForcePathStyle\":\"true\",\"s3Url\":\"http://minio.practice1-storage.svc.cluster.local:9000\"},\"credential\":{\"key\":\"cloud\",\"name\":\"test-missing-bucket-1102123752-0b10\"},\"objectStorage\":{\"bucket\":\"absent-1102123752-40d1\"},\"provider\":\"aws\",\"validationFrequency\":\"10s\"}}\n"
+    },
+    "creationTimestamp": "2026-11-02T12:37:52Z",
+    "generation": 2,
+    "name": "test-missing-bucket-1102123752-0b10",
+    "namespace": "velero",
+    "resourceVersion": "3726",
+    "uid": "7067349c-4a6b-44d8-a2d5-16bea518c584"
+  },
+  "spec": {
+    "config": {
+      "region": "us-east-1",
+      "s3ForcePathStyle": "true",
+      "s3Url": "http://minio.practice1-storage.svc.cluster.local:9000"
+    },
+    "credential": {
+      "key": "cloud",
+      "name": "test-missing-bucket-1102123752-0b10"
+    },
+    "objectStorage": {
+      "bucket": "absent-1102123752-40d1"
+    },
+    "provider": "aws",
+    "validationFrequency": "10s"
+  },
+  "status": {
+    "lastValidationTime": "2026-11-02T12:37:52Z",
+    "message": "BackupStorageLocation \"test-missing-bucket-1102123752-0b10\" is unavailable: rpc error: code = Unknown desc = operation error S3: ListObjectsV2, https response error StatusCode: 404, RequestID: 18E43AAE8DAE4A77, HostID: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, NoSuchBucket: The specified bucket does not exist",
+    "phase": "Unavailable"
+  }
+}

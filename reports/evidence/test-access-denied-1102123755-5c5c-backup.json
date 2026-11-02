@@ -1,0 +1,52 @@
+{
+  "apiVersion": "velero.io/v1",
+  "kind": "Backup",
+  "metadata": {
+    "annotations": {
+      "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Backup\",\"metadata\":{\"annotations\":{},\"name\":\"test-access-denied-1102123755-5c5c\",\"namespace\":\"velero\"},\"spec\":{\"defaultVolumesToFsBackup\":false,\"excludedResources\":[\"events\",\"jobs\",\"persistentvolumes\"],\"includeClusterResources\":false,\"includedNamespaces\":[\"practice1-app\"],\"itemOperationTimeout\":\"10m0s\",\"snapshotVolumes\":false,\"storageLocation\":\"test-access-denied-1102123755-5c5c\",\"ttl\":\"168h0m0s\"}}\n",
+      "velero.io/resource-timeout": "10m0s",
+      "velero.io/source-cluster-k8s-gitversion": "v1.35.8",
+      "velero.io/source-cluster-k8s-major-version": "1",
+      "velero.io/source-cluster-k8s-minor-version": "35"
+    },
+    "creationTimestamp": "2026-11-02T12:37:56Z",
+    "generation": 4,
+    "labels": {
+      "velero.io/storage-location": "test-access-denied-1102123755-5c5c"
+    },
+    "name": "test-access-denied-1102123755-5c5c",
+    "namespace": "velero",
+    "resourceVersion": "3751",
+    "uid": "def884b0-e878-4ce6-95bd-623ca36733ad"
+  },
+  "spec": {
+    "csiSnapshotTimeout": "10m0s",
+    "defaultVolumesToFsBackup": false,
+    "excludedResources": [
+      "events",
+      "jobs",
+      "persistentvolumes",
+      "volumesnapshots.snapshot.storage.k8s.io",
+      "volumesnapshotcontents.snapshot.storage.k8s.io"
+    ],
+    "includeClusterResources": false,
+    "includedNamespaces": [
+      "practice1-app"
+    ],
+    "itemOperationTimeout": "10m0s",
+    "snapshotMoveData": false,
+    "snapshotVolumes": false,
+    "storageLocation": "test-access-denied-1102123755-5c5c",
+    "ttl": "168h0m0s",
+    "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+  },
+  "status": {
+    "expiration": "2026-11-09T12:37:56Z",
+    "formatVersion": "1.1.0",
+    "phase": "FailedValidation",
+    "validationErrors": [
+      "backup can't be created because BackupStorageLocation test-access-denied-1102123755-5c5c is in Unavailable status."
+    ],
+    "version": 1
+  }
+}

@@ -1,0 +1,15 @@
+apiVersion: velero.io/v1
+kind: Schedule
+metadata: {name: practice1-daily, namespace: velero}
+spec:
+  schedule: '0 23 * * *'
+  paused: false
+  template:
+    includedNamespaces: [practice1-app]
+    includeClusterResources: false
+    excludedResources: [events, jobs, persistentvolumes]
+    storageLocation: default
+    snapshotVolumes: false
+    defaultVolumesToFsBackup: false
+    ttl: 168h0m0s
+    itemOperationTimeout: 10m0s

@@ -1,0 +1,12 @@
+{
+  "baseline": {
+    "sha256": "f6d09d7a89142a87847c6cf431f71d37786657dd9d36b0b11c2157cdcea7a2b1",
+    "accounts": 100,
+    "orders": 1000,
+    "amount_cents": 8508500
+  },
+  "scheduled_backup": "practice1-proof-1102123600-5936-20261102123731",
+  "backup": "manual-1102123740-0256",
+  "restore": "restore-1102123951-bfd6",
+  "target": "practice1-restore-retry-65b7"
+}
