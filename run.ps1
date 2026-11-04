@@ -6,7 +6,6 @@ $ErrorActionPreference = 'Stop'
 Set-Location -LiteralPath $PSScriptRoot
 $pythonCandidates = @(
     (Join-Path $PSScriptRoot '.venv/Scripts/python.exe'),
-    'C:/Users/kamil/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe'
 )
 $pythonExecutable = $null
 foreach ($candidate in $pythonCandidates) {
