@@ -1,4 +1,4 @@
-# practice1: резервное копирование Kubernetes в S3
+# practice: LLM-агент диагностики неисправностей OpenStack и Kubernetes в VK Cloud
 
 Учебный стенд: **kind + PostgreSQL + PostgREST + MinIO + Velero/Kopia**.
 Автоматический сценарий создаёт контрольную БД, проверяет настоящую плановую и ручную копии,
